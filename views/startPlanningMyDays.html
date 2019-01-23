@@ -1,0 +1,46 @@
+<div id="startPlanningMyDays-page" ng-controller="StartPlanningMyDaysController as dsb">
+
+  <form ng-submit="CheckStartPlanningMyDays()" name="startPlanningMyDaysForm">
+    <h3 style="text-align:center">Start Planning my days</h3>
+
+    <div class="left">
+      <br>
+      <div class="form-group">
+        <label>Select Date:</label>
+        <input class="form-control" ng-model="date" id="date">
+      </div>
+      <div class="form-group">
+        <label>Enter Event: </label>
+        <input class="form-control" ng-model="action" id="action">
+      </div>
+      
+      <div class="form-group">
+      
+      <label>Select Image</label>
+      <input class="form-control" type="file" accept="image/*" id="eventImage" name="eventImage" ng-model="eventImage"  >
+      
+    </div>
+      
+      
+      
+      
+      <div class="form-group">
+        <label>Select Time:</label>
+        <input class="form-control" id="timepicker" ng-model="myTimepicker">
+      </div>
+      <div class="form-group">
+        <label>Select Duration (End time): </label>
+        <input class="form-control" id="duration" ng-model="duration" />
+
+      </div>
+      <div class="form-group text-center">
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </div>
+    </div>
+    <h3>{{message}}</h3>
+    
+  </form>
+</div>
+
+
+

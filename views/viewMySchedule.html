@@ -1,0 +1,77 @@
+<div id="viewMySchedule-page" ng-controller="viewMyScheduleController as dsb">
+
+    <div container >
+    <div class="row-xs-12"><p1>{{currentEvent.Action}}</p1></div>
+    <div class="col-xs-6"><h3>Hello, {{ user.username }} !! </h3></div>
+  <div class="row-xs-12 "><p2>Event starting at: {{currentEvent.Time}}</p2> </div>
+   
+  
+<div class="row-xs-12">
+  <div class="col-xs-6"></div>
+  <div id="clockDisplay" class="clockStyle">
+     {{ myClock | date:'mediumTime' }}
+          <br>
+          <br>
+          <p id="calendar-day">{{ calendar | date:'EEEE' }}</p>
+          <p id="calendar-date">{{ calendar | date:'d MMM' }}</p>
+         <p id="calendar-month-year">{{ calendar | date:'yyyy' }}</p>
+      
+      </div>
+        
+        
+  <div class="col-xs-6 col-md-6">
+    <img class="img" ng-if="currentEvent" ng-src="{{currentEvent.Image}}">
+    
+  </div>
+  <br>
+  <div class="row-xs-12"><p4>Event finishing at : {{currentEvent.Duration}}</p4></div>
+  
+<br> <div class="row-xs-12 "><p3>Tasks of the day</p3></div><br>
+    
+   <div class="row-xs-12"></div>      
+    <div class="col-xs-4" ><div id="liveclock" class="outer_face">
+    
+      <div class="marker oneseven"></div>
+                    <div class="marker twoeight"></div>
+                    <div class="marker fourten"></div>
+                    <div class="marker fiveeleven"></div>
+
+                             <div class="inner_face">
+                    <div class="hand hour"></div>
+                    <div class="hand minute"></div>
+                    <div class="hand second"></div>
+    </div>
+   </div>
+ </div>
+  
+  
+  <div class="col-xs-3" >
+    <table id="tableMod"> 
+      <tr>
+            <th>Time</th>
+            <th>Event</th>
+      </tr>
+ </table>
+ 
+<div class="col-xs-3 ">
+    <div class="row" ng-repeat="event in events">
+       <table>
+            <tr>
+               <td> {{event.Time}}</td>
+               <td> {{event.Action}}</td>
+            </tr>
+       </table> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+   
+
+      
+      
+
+
+
